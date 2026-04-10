@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/link";
+
 const footerLinks = [
   { label: "Sobre mí", href: "#sobre-mi" },
   { label: "Servicios", href: "#servicios" },
@@ -165,20 +167,13 @@ export default function Footer() {
               © {new Date().getFullYear()} Araceli Aguilera Jorquera · Todos los derechos reservados
             </p>
             <div className="flex gap-6">
-              <a
-                href="#"
+              <Link
+                href="/privacidad"
                 className="font-sans text-xs text-white/40 hover:text-white/60 transition-colors"
                 aria-label="Política de privacidad"
               >
                 Política de privacidad
-              </a>
-              <a
-                href="#"
-                className="font-sans text-xs text-white/40 hover:text-white/60 transition-colors"
-                aria-label="Términos y condiciones"
-              >
-                Términos y condiciones
-              </a>
+              </Link>
             </div>
           </div>
         </div>
