@@ -131,57 +131,6 @@ export default function Hero({ imageSrc = "/foto-psicologa.jpg" }: HeroProps) {
               />
             </div>
 
-            {/* Tarjeta flotante - credencial */}
-            <div
-              className="absolute -left-8 bottom-16 bg-white rounded-2xl px-5 py-4 shadow-xl border border-[#EAF4ED] max-w-[180px]"
-              aria-label="Credencial profesional"
-            >
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-[#EAF4ED] rounded-full flex items-center justify-center shrink-0">
-                  <svg
-                    className="w-5 h-5 text-[#6B9E7A]"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    aria-hidden="true"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                    />
-                  </svg>
-                </div>
-                <div>
-                  <p className="font-sans text-xs font-semibold text-[#2C2C2C]">
-                    Reg. Profesional
-                  </p>
-                  <p className="font-sans text-xs text-[#6B9E7A]">
-                    Psicóloga Clínica
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Tarjeta flotante - disponibilidad */}
-            <div
-              className="absolute -right-8 top-12 bg-white rounded-2xl px-5 py-4 shadow-xl border border-[#EAF4ED]"
-              aria-label="Disponibilidad"
-            >
-              <p className="font-sans text-xs text-[#8A8A8A] mb-1">
-                Próxima disponibilidad
-              </p>
-              <p className="font-sans text-sm font-semibold text-[#2C2C2C]">
-                Esta semana
-              </p>
-              <div className="flex items-center gap-1.5 mt-2">
-                <span className="w-2 h-2 bg-[#6B9E7A] rounded-full" />
-                <span className="font-sans text-xs text-[#6B9E7A] font-medium">
-                  Cupos disponibles
-                </span>
-              </div>
-            </div>
           </div>
         </div>
       </div>

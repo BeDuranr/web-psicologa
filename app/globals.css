@@ -110,3 +110,15 @@ h1, h2, h3, h4, h5, h6 {
   outline-offset: 3px;
   border-radius: 4px;
 }
+
+/* Secciones colapsables en móvil */
+@media (max-width: 767px) {
+  .mobile-collapsible {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+  }
+  .mobile-collapsible.is-open {
+    max-height: 6000px;
+  }
+}

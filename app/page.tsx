@@ -10,6 +10,7 @@ import HowItWorks from "@/components/HowItWorks";
 import FAQ from "@/components/FAQ";
 import Booking from "@/components/Booking";
 import Footer from "@/components/Footer";
+import CollapsibleSection from "@/components/CollapsibleSection";
 
 export default function Home() {
   // Scroll reveal animation — usa inline styles para evitar conflictos con Tailwind
@@ -38,10 +39,16 @@ export default function Home() {
       <Navbar />
       <Hero imageSrc="/foto-psicologa.jpg" />
       <Stats />
-      <About />
+      <CollapsibleSection title="Sobre mí">
+        <About />
+      </CollapsibleSection>
       <Services />
-      <HowItWorks />
-      <FAQ />
+      <CollapsibleSection title="Cómo funciona">
+        <HowItWorks />
+      </CollapsibleSection>
+      <CollapsibleSection title="Preguntas frecuentes">
+        <FAQ />
+      </CollapsibleSection>
       <Booking />
       <Footer />
     </main>
