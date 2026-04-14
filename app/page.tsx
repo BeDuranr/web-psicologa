@@ -39,17 +39,17 @@ export default function Home() {
       <Navbar />
       <Hero imageSrc="/foto-psicologa.jpg" />
       <Stats />
-      <CollapsibleSection title="Sobre mí">
-        <About />
-      </CollapsibleSection>
       <Services />
       <CollapsibleSection title="Cómo funciona">
         <HowItWorks />
       </CollapsibleSection>
+      <CollapsibleSection title="Sobre mí">
+        <About />
+      </CollapsibleSection>
+      <Booking />
       <CollapsibleSection title="Preguntas frecuentes">
         <FAQ />
       </CollapsibleSection>
-      <Booking />
       <Footer />
     </main>
   );

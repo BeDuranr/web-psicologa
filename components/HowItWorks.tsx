@@ -14,9 +14,9 @@ const steps = [
   },
   {
     number: "02",
-    title: "Confirma tu consulta",
+    title: "Realiza el pago",
     description:
-      "Completa un breve formulario y realiza el pago seguro. Recibirás una confirmación por correo con el enlace de videollamada.",
+      "Recibirás los datos bancarios por correo. Realiza la transferencia y envía el comprobante por WhatsApp al +569 76143079 para confirmar tu hora.",
     icon: (
       <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
