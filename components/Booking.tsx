@@ -151,7 +151,7 @@ export default function Booking() {
               frameBorder="0"
               title="Agenda una consulta con Araceli Aguilera"
               loading="lazy"
-              style={{ display: "block" }}
+style={{ display: "block" }}
             />
           ) : (
             // Fallback si no hay username configurado
