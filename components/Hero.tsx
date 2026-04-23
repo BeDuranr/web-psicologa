@@ -137,7 +137,7 @@ export default function Hero({ imageSrc = "/foto-psicologa.jpg" }: HeroProps) {
 
       {/* Scroll indicator */}
       <div
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce"
+        className="absolute bottom-8 left-0 right-0 flex flex-col items-center gap-2 animate-bounce"
         aria-hidden="true"
       >
         <span className="font-sans text-xs text-[#8A8A8A] tracking-widest uppercase">
