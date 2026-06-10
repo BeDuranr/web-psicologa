@@ -125,7 +125,7 @@ export default function Booking() {
                 </button>
                 {/* Botón WhatsApp */}
                 <a
-                  href="https://wa.me/56976143079"
+                  href="https://wa.me/56951014192"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 bg-[#25D366] text-white font-sans text-sm font-semibold px-5 py-3 rounded-full hover:bg-[#20bd5a] transition-colors duration-200 shadow-sm"
