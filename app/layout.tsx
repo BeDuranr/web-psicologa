@@ -17,7 +17,10 @@ const dmSans = DM_Sans({
   display: "swap",
 });
 
+const siteUrl = "https://araceli-psicologa.vercel.app";
+
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title: "Araceli Aguilera Jorquera | Psicóloga",
   description:
     "Psicóloga con enfoque cognitivo-conductual. Acompañamiento terapéutico individual y de pareja. Agenda tu primera consulta online de forma fácil y segura.",
@@ -32,20 +35,16 @@ export const metadata: Metadata = {
     "UCSH",
   ],
   authors: [{ name: "Araceli Aguilera Jorquera" }],
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     title: "Araceli Aguilera Jorquera | Psicóloga",
     description:
       "Psicóloga con enfoque cognitivo-conductual. Acompañamiento terapéutico individual y de pareja. Agenda tu primera consulta online.",
     type: "website",
     locale: "es_CL",
-    images: [
-      {
-        url: "/og-image.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Araceli Aguilera Jorquera - Psicóloga",
-      },
-    ],
+    url: siteUrl,
   },
   twitter: {
     card: "summary_large_image",
@@ -59,6 +58,31 @@ export const metadata: Metadata = {
   },
 };
 
+const personJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Araceli Aguilera Jorquera",
+  jobTitle: "Psicóloga",
+  description:
+    "Psicóloga con enfoque cognitivo-conductual (TCC), acompañamiento terapéutico individual y de pareja.",
+  url: siteUrl,
+  image: `${siteUrl}/foto-psicologa.jpg`,
+  email: "mailto:psicoaraceliaguilera@gmail.com",
+  alumniOf: {
+    "@type": "CollegeOrUniversity",
+    name: "Universidad Católica Silva Henríquez",
+  },
+  knowsAbout: [
+    "Terapia Cognitivo-Conductual",
+    "Ansiedad",
+    "Autoestima",
+    "Terapia de pareja",
+    "Desarrollo personal",
+  ],
+  areaServed: "CL",
+  availableLanguage: "es",
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -69,7 +93,13 @@ export default function RootLayout({
       lang="es"
       className={`${cormorantGaramond.variable} ${dmSans.variable}`}
     >
-      <body className="font-sans antialiased">{children}</body>
+      <body className="font-sans antialiased">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+        />
+        {children}
+      </body>
     </html>
   );
 }
