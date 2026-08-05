@@ -1,4 +1,4 @@
-"use client";
+import ScrollLink from "./ScrollLink";
 
 const services = [
   {
@@ -166,23 +166,17 @@ export default function Services() {
               </ul>
 
               {/* CTA */}
-              <a
+              <ScrollLink
                 href="#agendar"
-                onClick={(e) => {
-                  e.preventDefault();
-                  document
-                    .querySelector("#agendar")
-                    ?.scrollIntoView({ behavior: "smooth" });
-                }}
                 className={`w-full block text-center font-sans text-sm font-semibold px-6 py-3.5 rounded-full transition-all duration-300 ${
                   service.featured
                     ? "bg-white text-[#6B9E7A] hover:bg-white/90"
                     : "bg-[#6B9E7A] text-white hover:bg-opacity-90"
                 }`}
-                aria-label={`Agendar ${service.title}`}
+                ariaLabel={`Agendar ${service.title}`}
               >
                 Agendar ahora
-              </a>
+              </ScrollLink>
             </article>
           ))}
         </div>

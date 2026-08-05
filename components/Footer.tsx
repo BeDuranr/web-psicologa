@@ -1,6 +1,5 @@
-"use client";
-
 import Link from "next/link";
+import ScrollLink from "./ScrollLink";
 
 const footerLinks = [
   { label: "Sobre mí", href: "#sobre-mi" },
@@ -11,11 +10,6 @@ const footerLinks = [
 ];
 
 export default function Footer() {
-  const handleNavClick = (href: string) => {
-    const el = document.querySelector(href);
-    if (el) el.scrollIntoView({ behavior: "smooth" });
-  };
-
   return (
     <footer
       className="bg-[#2C2C2C] text-white"
@@ -32,13 +26,14 @@ export default function Footer() {
             El primer paso es el más importante. Agenda tu consulta hoy y
             empieza a construir el bienestar que mereces.
           </p>
-          <button
-            onClick={() => handleNavClick("#agendar")}
+          <ScrollLink
+            as="button"
+            href="#agendar"
             className="bg-white text-[#6B9E7A] font-sans font-semibold px-10 py-4 rounded-full hover:bg-[#F8F5F0] transition-all duration-300 shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0"
-            aria-label="Ir a la sección de agendamiento"
+            ariaLabel="Ir a la sección de agendamiento"
           >
             Agendar ahora
-          </button>
+          </ScrollLink>
         </div>
       </div>
 
@@ -71,12 +66,13 @@ export default function Footer() {
               <ul className="space-y-3" role="list">
                 {footerLinks.map((link) => (
                   <li key={link.href}>
-                    <button
-                      onClick={() => handleNavClick(link.href)}
+                    <ScrollLink
+                      as="button"
+                      href={link.href}
                       className="font-sans text-sm text-white/60 hover:text-[#6B9E7A] transition-colors duration-200"
                     >
                       {link.label}
-                    </button>
+                    </ScrollLink>
                   </li>
                 ))}
               </ul>

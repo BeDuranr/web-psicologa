@@ -1,4 +1,4 @@
-"use client";
+import ScrollLink from "./ScrollLink";
 
 const steps = [
   {
@@ -105,19 +105,13 @@ export default function HowItWorks() {
 
         {/* CTA */}
         <div className="text-center mt-16 reveal">
-          <a
+          <ScrollLink
             href="#agendar"
-            onClick={(e) => {
-              e.preventDefault();
-              document
-                .querySelector("#agendar")
-                ?.scrollIntoView({ behavior: "smooth" });
-            }}
             className="btn-primary"
-            aria-label="Agendar primera consulta ahora"
+            ariaLabel="Agendar primera consulta ahora"
           >
             Agendar mi primera consulta
-          </a>
+          </ScrollLink>
         </div>
       </div>
     </section>
