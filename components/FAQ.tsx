@@ -37,7 +37,7 @@ export default function FAQ() {
       <div className="max-w-3xl mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-16 reveal">
-          <span className="font-sans text-sm tracking-widest text-[#6B9E7A] uppercase mb-3 block">
+          <span className="font-sans text-sm tracking-widest text-sage-accessible uppercase mb-3 block">
             Resuelve tus dudas
           </span>
           <h2
@@ -72,7 +72,7 @@ export default function FAQ() {
                 >
                   <span
                     className="font-serif text-lg font-medium pr-4"
-                    style={{ color: isOpen ? "#6B9E7A" : "#2C2C2C" }}
+                    style={{ color: isOpen ? "#4A7256" : "#2C2C2C" }}
                   >
                     {faq.question}
                   </span>
@@ -136,7 +136,7 @@ export default function FAQ() {
           </p>
           <a
             href="mailto:psicoaraceliaguilera@gmail.com"
-            className="font-sans text-sm font-semibold text-[#6B9E7A] hover:underline transition-all"
+            className="font-sans text-sm font-semibold text-sage-accessible hover:underline transition-all"
             aria-label="Enviar correo con preguntas"
           >
             psicoaraceliaguilera@gmail.com →

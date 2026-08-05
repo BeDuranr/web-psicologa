@@ -35,7 +35,7 @@ export default function Booking() {
       <div className="max-w-5xl mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-12 reveal">
-          <span className="font-sans text-sm tracking-widest text-[#6B9E7A] uppercase mb-3 block">
+          <span className="font-sans text-sm tracking-widest text-sage-accessible uppercase mb-3 block">
             Da el primer paso
           </span>
           <h2
@@ -86,7 +86,7 @@ export default function Booking() {
             <div className="grid sm:grid-cols-2 gap-x-10 gap-y-4 mb-6">
               {TRANSFER_DATA.map((item) => (
                 <div key={item.label}>
-                  <p className="font-sans text-xs text-[#8A8A8A] uppercase tracking-wider mb-0.5">
+                  <p className="font-sans text-xs text-[#707070] uppercase tracking-wider mb-0.5">
                     {item.label}
                   </p>
                   <p className="font-sans text-sm font-semibold text-[#2C2C2C]">
@@ -104,7 +104,7 @@ export default function Booking() {
                 {/* Botón copiar datos */}
                 <button
                   onClick={handleCopy}
-                  className="flex items-center gap-2 bg-white text-[#6B9E7A] font-sans text-sm font-semibold px-5 py-3 rounded-full border border-[#6B9E7A] hover:bg-[#EAF4ED] transition-colors duration-200 shadow-sm"
+                  className="flex items-center gap-2 bg-white text-sage-accessible font-sans text-sm font-semibold px-5 py-3 rounded-full border border-[#6B9E7A] hover:bg-[#EAF4ED] transition-colors duration-200 shadow-sm"
                   aria-label="Copiar datos de transferencia"
                 >
                   {copied ? (
@@ -175,9 +175,9 @@ style={{ display: "block" }}
               <p className="font-sans text-sm font-semibold text-[#2C2C2C] mb-2">
                 Calendario no configurado
               </p>
-              <p className="font-sans text-xs text-[#8A8A8A]">
+              <p className="font-sans text-xs text-[#707070]">
                 Agrega tu username de Cal.com en{" "}
-                <code className="bg-[#EAF4ED] px-1 py-0.5 rounded text-[#6B9E7A]">
+                <code className="bg-[#EAF4ED] px-1 py-0.5 rounded text-sage-accessible">
                   .env.local
                 </code>
               </p>
@@ -186,11 +186,11 @@ style={{ display: "block" }}
         </div>
 
         {/* Contacto alternativo */}
-        <p className="text-center font-sans text-sm text-[#8A8A8A] mt-8 reveal">
+        <p className="text-center font-sans text-sm text-[#707070] mt-8 reveal">
           ¿Prefieres escribirme primero?{" "}
           <a
             href="mailto:psicoaraceliaguilera@gmail.com"
-            className="text-[#6B9E7A] font-medium hover:underline"
+            className="text-sage-accessible font-medium hover:underline"
           >
             psicoaraceliaguilera@gmail.com
           </a>

@@ -13,6 +13,9 @@
   --color-text-dark: #2C2C2C;
   --color-text-medium: #5A5A5A;
   --color-text-light: #8A8A8A;
+  --color-sage-accessible: #4A7256;
+  --color-terracotta-accessible: #9C573E;
+  --color-text-light-accessible: #707070;
 
   /* Fuentes */
   --font-serif: var(--font-cormorant), Georgia, serif;
@@ -85,14 +88,14 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Botones base */
 .btn-primary {
-  @apply bg-terracotta text-white px-8 py-4 rounded-full font-sans font-medium text-base
+  @apply bg-terracotta-accessible text-white px-8 py-4 rounded-full font-sans font-medium text-base
          hover:bg-opacity-90 transition-all duration-300 inline-block cursor-pointer
          shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0;
 }
 
 .btn-secondary {
-  @apply border-2 border-sage text-sage px-8 py-4 rounded-full font-sans font-medium text-base
-         hover:bg-sage hover:text-white transition-all duration-300 inline-block cursor-pointer;
+  @apply border-2 border-sage text-sage-accessible px-8 py-4 rounded-full font-sans font-medium text-base
+         hover:bg-sage-accessible hover:text-white transition-all duration-300 inline-block cursor-pointer;
 }
 
 /* Divisor decorativo */

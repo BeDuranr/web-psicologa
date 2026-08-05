@@ -40,7 +40,7 @@ const stats = [
 export default function Stats() {
   return (
     <section
-      className="bg-[#6B9E7A] py-12 relative overflow-hidden"
+      className="bg-sage-accessible py-12 relative overflow-hidden"
       aria-label="Estadísticas profesionales"
     >
       {/* Decoración de fondo */}
@@ -68,7 +68,7 @@ export default function Stats() {
               <span className="font-serif text-4xl md:text-5xl font-semibold mb-1">
                 {stat.value}
               </span>
-              <span className="font-sans text-sm text-white/80 leading-tight">
+              <span className="font-sans text-sm text-white/90 leading-tight">
                 {stat.label}
               </span>
             </div>

@@ -56,7 +56,7 @@ export default function Navbar() {
           >
             Araceli Aguilera Jorquera
           </span>
-          <span className="font-sans text-xs tracking-widest text-[#6B9E7A] uppercase mt-0.5">
+          <span className="font-sans text-xs tracking-widest text-sage-accessible uppercase mt-0.5">
             Psicóloga
           </span>
         </a>
@@ -78,7 +78,7 @@ export default function Navbar() {
               <li key={link.href}>
                 <button
                   onClick={() => handleNavClick(link.href)}
-                  className="font-sans text-sm text-[#5A5A5A] hover:text-[#6B9E7A] transition-colors duration-200 relative group"
+                  className="font-sans text-sm text-[#5A5A5A] hover:text-sage-accessible transition-colors duration-200 relative group"
                 >
                   {link.label}
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#6B9E7A] group-hover:w-full transition-all duration-300" />
@@ -131,7 +131,7 @@ export default function Navbar() {
                 className={`w-full text-left font-sans text-base transition-colors duration-200 ${
                   link.label === "Agendar"
                     ? "btn-primary !w-full !text-center mt-2"
-                    : "text-[#5A5A5A] hover:text-[#6B9E7A] py-1"
+                    : "text-[#5A5A5A] hover:text-sage-accessible py-1"
                 }`}
               >
                 {link.label === "Agendar" ? "Agendar hora" : link.label}

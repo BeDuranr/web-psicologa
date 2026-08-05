@@ -9,14 +9,19 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        // accessible = darkened variant, WCAG AA 4.5:1 for text/buttons on light backgrounds; the DEFAULT hue fails there
         sage: {
           DEFAULT: "#6B9E7A",
           light: "#EAF4ED",
           medium: "#C8E0CF",
+          accessible: "#4A7256",
         },
         cream: "#F8F5F0",
         blush: "#F2E8E4",
-        terracotta: "#C4826A",
+        terracotta: {
+          DEFAULT: "#C4826A",
+          accessible: "#9C573E",
+        },
       },
       fontFamily: {
         serif: ["var(--font-cormorant)", "Georgia", "serif"],

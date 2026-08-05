@@ -58,7 +58,7 @@ export default function PrivacidadPage() {
         <div className="max-w-3xl mx-auto px-6 py-6 flex items-center justify-between">
           <Link
             href="/"
-            className="flex items-center gap-2 text-[#6B9E7A] hover:text-[#5a8a68] transition-colors duration-200"
+            className="flex items-center gap-2 text-sage-accessible hover:text-[#3d5f46] transition-colors duration-200"
             aria-label="Volver al inicio"
           >
             <svg
@@ -77,7 +77,7 @@ export default function PrivacidadPage() {
             </svg>
             <span className="font-sans text-sm font-medium">Volver al inicio</span>
           </Link>
-          <span className="font-serif text-sm text-[#8A8A8A]">
+          <span className="font-serif text-sm text-[#707070]">
             Araceli Aguilera Jorquera · Psicóloga
           </span>
         </div>
@@ -87,7 +87,7 @@ export default function PrivacidadPage() {
       <div className="max-w-3xl mx-auto px-6 py-16">
         {/* Título */}
         <div className="mb-12">
-          <span className="font-sans text-xs tracking-widest text-[#6B9E7A] uppercase mb-3 block">
+          <span className="font-sans text-xs tracking-widest text-sage-accessible uppercase mb-3 block">
             Transparencia y confianza
           </span>
           <h1 className="font-serif text-4xl md:text-5xl font-semibold text-[#2C2C2C] mb-4">
@@ -128,12 +128,12 @@ export default function PrivacidadPage() {
 
         {/* Pie */}
         <div className="mt-12 pt-8 border-t border-[#EAF4ED] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-          <p className="font-sans text-xs text-[#8A8A8A]">
+          <p className="font-sans text-xs text-[#707070]">
             Última actualización: abril de 2026
           </p>
           <Link
             href="/"
-            className="font-sans text-sm font-medium text-[#6B9E7A] hover:underline"
+            className="font-sans text-sm font-medium text-sage-accessible hover:underline"
           >
             Volver al sitio principal →
           </Link>

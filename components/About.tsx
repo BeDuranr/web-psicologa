@@ -22,10 +22,10 @@ const credentials = [
 ];
 
 const enfoques = [
-  { label: "Cognitivo-Conductual", color: "bg-[#F2E8E4] text-[#C4826A]" },
-  { label: "Terapia Individual", color: "bg-[#EAF4ED] text-[#6B9E7A]" },
-  { label: "Ansiedad y Autoestima", color: "bg-[#F2E8E4] text-[#C4826A]" },
-  { label: "Desarrollo Personal", color: "bg-[#EAF4ED] text-[#6B9E7A]" },
+  { label: "Cognitivo-Conductual", color: "bg-[#F2E8E4] text-terracotta-accessible" },
+  { label: "Terapia Individual", color: "bg-[#EAF4ED] text-sage-accessible" },
+  { label: "Ansiedad y Autoestima", color: "bg-[#F2E8E4] text-terracotta-accessible" },
+  { label: "Desarrollo Personal", color: "bg-[#EAF4ED] text-sage-accessible" },
 ];
 
 export default function About() {
@@ -38,7 +38,7 @@ export default function About() {
       <div className="max-w-6xl mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-16 reveal">
-          <span className="font-sans text-sm tracking-widest text-[#6B9E7A] uppercase mb-3 block">
+          <span className="font-sans text-sm tracking-widest text-sage-accessible uppercase mb-3 block">
             Conóceme
           </span>
           <h2
@@ -96,7 +96,7 @@ export default function About() {
           {/* Tarjeta de cita + credenciales */}
           <div className="space-y-6 reveal reveal-delay-2">
             {/* Cita destacada */}
-            <div className="bg-[#6B9E7A] text-white rounded-3xl p-8 relative overflow-hidden">
+            <div className="bg-sage-accessible text-white rounded-3xl p-8 relative overflow-hidden">
               <div
                 className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/2"
                 aria-hidden="true"
@@ -113,7 +113,7 @@ export default function About() {
                 "El primer paso hacia el cambio es la conciencia. El segundo es
                 la aceptación."
               </blockquote>
-              <p className="font-sans text-sm text-white/70">— Nathaniel Branden</p>
+              <p className="font-sans text-sm text-white/90">— Nathaniel Branden</p>
             </div>
 
             {/* Credenciales */}

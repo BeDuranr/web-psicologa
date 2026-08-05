@@ -44,14 +44,14 @@ export default function Hero({ imageSrc = "/foto-psicologa.jpg" }: HeroProps) {
           {/* Badge */}
           <div className="inline-flex items-center gap-2 bg-[#EAF4ED] rounded-full px-4 py-2 mb-8">
             <span className="w-2 h-2 bg-[#6B9E7A] rounded-full animate-pulse" />
-            <span className="font-sans text-sm text-[#6B9E7A] font-medium">
+            <span className="font-sans text-sm text-sage-accessible font-medium">
               Atención online · Chile
             </span>
           </div>
 
           <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl font-semibold text-[#2C2C2C] leading-tight mb-6">
             Un espacio{" "}
-            <span className="text-[#6B9E7A] italic">seguro</span>
+            <span className="text-sage-accessible italic">seguro</span>
             <br />
             para sanar
           </h1>
@@ -96,7 +96,7 @@ export default function Hero({ imageSrc = "/foto-psicologa.jpg" }: HeroProps) {
             <div className="flex items-center gap-2 bg-white border border-[#C8E0CF] rounded-full px-4 py-2 shadow-sm">
               <span className="text-base" aria-hidden="true">🎓</span>
               <span className="font-sans text-sm text-[#5A5A5A]">
-                Egresada <span className="font-semibold text-[#2C2C2C]">UCSH</span> · Enfoque <span className="font-semibold text-[#6B9E7A]">TCC</span>
+                Egresada <span className="font-semibold text-[#2C2C2C]">UCSH</span> · Enfoque <span className="font-semibold text-sage-accessible">TCC</span>
               </span>
             </div>
           </div>
@@ -140,7 +140,7 @@ export default function Hero({ imageSrc = "/foto-psicologa.jpg" }: HeroProps) {
         className="absolute bottom-8 left-0 right-0 flex flex-col items-center gap-2 animate-bounce"
         aria-hidden="true"
       >
-        <span className="font-sans text-xs text-[#8A8A8A] tracking-widest uppercase">
+        <span className="font-sans text-xs text-[#707070] tracking-widest uppercase">
           Scroll
         </span>
         <svg

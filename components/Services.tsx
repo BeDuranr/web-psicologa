@@ -12,10 +12,10 @@ const services = [
     duration: "60 min",
     price: "$15.000",
     color: "bg-[#EAF4ED]",
-    accent: "text-[#6B9E7A]",
+    accent: "text-sage-accessible",
     border: "border-[#C8E0CF]",
     tag: "Ideal para comenzar",
-    tagColor: "bg-[#6B9E7A] text-white",
+    tagColor: "bg-sage-accessible text-white",
     features: [
       "Evaluación de motivo de consulta",
       "Historia personal y contexto de vida",
@@ -33,11 +33,11 @@ const services = [
     subtitle: "Proceso terapéutico",
     duration: "50 min",
     price: "$20.000",
-    color: "bg-[#6B9E7A]",
+    color: "bg-sage-accessible",
     accent: "text-white",
     border: "border-transparent",
     tag: "Más solicitado",
-    tagColor: "bg-[#C4826A] text-white",
+    tagColor: "bg-terracotta-accessible text-white",
     featured: true,
     features: [
       "Seguimiento de objetivos terapéuticos",
@@ -58,7 +58,7 @@ export default function Services() {
       <div className="max-w-6xl mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-16 reveal">
-          <span className="font-sans text-sm tracking-widest text-[#6B9E7A] uppercase mb-3 block">
+          <span className="font-sans text-sm tracking-widest text-sage-accessible uppercase mb-3 block">
             Lo que ofrezco
           </span>
           <h2
@@ -112,7 +112,7 @@ export default function Services() {
               </h3>
               <p
                 className={`font-sans text-sm mb-6 ${
-                  service.featured ? "text-white/70" : "text-[#8A8A8A]"
+                  service.featured ? "text-white/90" : "text-[#707070]"
                 }`}
               >
                 {service.subtitle}
@@ -129,7 +129,7 @@ export default function Services() {
                 </span>
                 <span
                   className={`font-sans text-sm mb-1 ${
-                    service.featured ? "text-white/70" : "text-[#8A8A8A]"
+                    service.featured ? "text-white/90" : "text-[#707070]"
                   }`}
                 >
                   / {service.duration}
@@ -170,8 +170,8 @@ export default function Services() {
                 href="#agendar"
                 className={`w-full block text-center font-sans text-sm font-semibold px-6 py-3.5 rounded-full transition-all duration-300 ${
                   service.featured
-                    ? "bg-white text-[#6B9E7A] hover:bg-white/90"
-                    : "bg-[#6B9E7A] text-white hover:bg-opacity-90"
+                    ? "bg-white text-sage-accessible hover:bg-white/90"
+                    : "bg-sage-accessible text-white hover:bg-opacity-90"
                 }`}
                 ariaLabel={`Agendar ${service.title}`}
               >
@@ -182,7 +182,7 @@ export default function Services() {
         </div>
 
         {/* Nota de pago */}
-        <p className="text-center font-sans text-sm text-[#8A8A8A] mt-10 reveal">
+        <p className="text-center font-sans text-sm text-[#707070] mt-10 reveal">
           🏦 Pago por transferencia bancaria.
         </p>
       </div>

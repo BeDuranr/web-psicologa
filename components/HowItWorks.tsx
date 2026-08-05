@@ -57,7 +57,7 @@ export default function HowItWorks() {
       <div className="max-w-6xl mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-16 reveal">
-          <span className="font-sans text-sm tracking-widest text-[#6B9E7A] uppercase mb-3 block">
+          <span className="font-sans text-sm tracking-widest text-sage-accessible uppercase mb-3 block">
             Simple y sin complicaciones
           </span>
           <h2
@@ -88,7 +88,7 @@ export default function HowItWorks() {
                 <div className="w-20 h-20 bg-white border-2 border-[#C8E0CF] rounded-full flex items-center justify-center text-[#6B9E7A] shadow-sm group-hover:border-[#6B9E7A] group-hover:shadow-md transition-all duration-300 relative z-10">
                   {step.icon}
                 </div>
-                <span className="absolute -top-2 -right-2 w-7 h-7 bg-[#6B9E7A] text-white rounded-full flex items-center justify-center font-sans text-xs font-bold z-20">
+                <span className="absolute -top-2 -right-2 w-7 h-7 bg-sage-accessible text-white rounded-full flex items-center justify-center font-sans text-xs font-bold z-20">
                   {step.number}
                 </span>
               </div>

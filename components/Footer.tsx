@@ -17,19 +17,19 @@ export default function Footer() {
       aria-label="Pie de página"
     >
       {/* CTA Banner */}
-      <div className="bg-[#6B9E7A] py-14">
+      <div className="bg-sage-accessible py-14">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <h2 className="font-serif text-3xl md:text-4xl font-semibold text-white mb-4">
             ¿Lista/o para comenzar tu proceso?
           </h2>
-          <p className="font-sans text-base text-white/80 mb-8 max-w-xl mx-auto">
+          <p className="font-sans text-base text-white/90 mb-8 max-w-xl mx-auto">
             El primer paso es el más importante. Agenda tu consulta hoy y
             empieza a construir el bienestar que mereces.
           </p>
           <ScrollLink
             as="button"
             href="#agendar"
-            className="bg-white text-[#6B9E7A] font-sans font-semibold px-10 py-4 rounded-full hover:bg-[#F8F5F0] transition-all duration-300 shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0"
+            className="bg-white text-sage-accessible font-sans font-semibold px-10 py-4 rounded-full hover:bg-[#F8F5F0] transition-all duration-300 shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0"
             ariaLabel="Ir a la sección de agendamiento"
           >
             Agendar ahora
@@ -159,13 +159,13 @@ export default function Footer() {
         {/* Divider */}
         <div className="border-t border-white/10 pt-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            <p className="font-sans text-xs text-white/40 text-center md:text-left">
+            <p className="font-sans text-xs text-white/60 text-center md:text-left">
               © {new Date().getFullYear()} Araceli Aguilera Jorquera · Todos los derechos reservados
             </p>
             <div className="flex gap-6">
               <Link
                 href="/privacidad"
-                className="font-sans text-xs text-white/40 hover:text-white/60 transition-colors"
+                className="font-sans text-xs text-white/60 hover:text-white/80 transition-colors"
                 aria-label="Política de privacidad"
               >
                 Política de privacidad
