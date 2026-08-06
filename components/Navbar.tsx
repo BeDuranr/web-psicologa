@@ -49,11 +49,7 @@ export default function Navbar() {
           className="flex flex-col leading-none group"
           aria-label="Ir al inicio"
         >
-          <span
-            className={`font-serif text-2xl font-semibold transition-colors duration-300 ${
-              scrolled ? "text-[#2C2C2C]" : "text-[#2C2C2C]"
-            }`}
-          >
+          <span className="font-serif text-2xl font-semibold text-[#2C2C2C] transition-colors duration-300">
             Araceli Aguilera Jorquera
           </span>
           <span className="font-sans text-xs tracking-widest text-sage-accessible uppercase mt-0.5">
@@ -94,6 +90,7 @@ export default function Navbar() {
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label={menuOpen ? "Cerrar menú" : "Abrir menú"}
           aria-expanded={menuOpen}
+          aria-controls="mobile-menu"
         >
           <span
             className={`block w-6 h-0.5 bg-[#2C2C2C] transition-all duration-300 ${
@@ -115,6 +112,7 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       <div
+        id="mobile-menu"
         className={`md:hidden transition-all duration-300 overflow-hidden ${
           menuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
         }`}

@@ -20,10 +20,15 @@ export default function Booking() {
 
   const handleCopy = () => {
     const text = TRANSFER_DATA.map((d) => `${d.label}: ${d.value}`).join("\n");
-    navigator.clipboard.writeText(text).then(() => {
-      setCopied(true);
-      setTimeout(() => setCopied(false), 2500);
-    });
+    navigator.clipboard
+      .writeText(text)
+      .then(() => {
+        setCopied(true);
+        setTimeout(() => setCopied(false), 2500);
+      })
+      .catch(() => {
+        console.error("No se pudo copiar los datos de transferencia al portapapeles.");
+      });
   };
 
   return (
@@ -106,6 +111,7 @@ export default function Booking() {
                   onClick={handleCopy}
                   className="flex items-center gap-2 bg-white text-sage-accessible font-sans text-sm font-semibold px-5 py-3 rounded-full border border-[#6B9E7A] hover:bg-[#EAF4ED] transition-colors duration-200 shadow-sm"
                   aria-label="Copiar datos de transferencia"
+                  aria-live="polite"
                 >
                   {copied ? (
                     <>
