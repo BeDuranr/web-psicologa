@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import ScrollLink from "./ScrollLink";
 
 const navLinks = [
   { label: "Sobre mí", href: "#sobre-mi" },
@@ -19,12 +20,6 @@ export default function Navbar() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
-  const handleNavClick = (href: string) => {
-    setMenuOpen(false);
-    const el = document.querySelector(href);
-    if (el) el.scrollIntoView({ behavior: "smooth" });
-  };
 
   return (
     <header
@@ -49,7 +44,7 @@ export default function Navbar() {
           className="flex flex-col leading-none group"
           aria-label="Ir al inicio"
         >
-          <span className="font-serif text-2xl font-semibold text-[#2C2C2C] transition-colors duration-300">
+          <span className="font-serif text-2xl font-semibold text-ink transition-colors duration-300">
             Araceli Aguilera Jorquera
           </span>
           <span className="font-sans text-xs tracking-widest text-sage-accessible uppercase mt-0.5">
@@ -62,23 +57,25 @@ export default function Navbar() {
           {navLinks.map((link) =>
             link.label === "Agendar" ? (
               <li key={link.href}>
-                <button
-                  onClick={() => handleNavClick(link.href)}
+                <ScrollLink
+                  as="button"
+                  href={link.href}
                   className="btn-primary !px-6 !py-2.5 !text-sm"
-                  aria-label="Agendar consulta"
+                  ariaLabel="Agendar consulta"
                 >
                   Agendar hora
-                </button>
+                </ScrollLink>
               </li>
             ) : (
               <li key={link.href}>
-                <button
-                  onClick={() => handleNavClick(link.href)}
-                  className="font-sans text-sm text-[#5A5A5A] hover:text-sage-accessible transition-colors duration-200 relative group"
+                <ScrollLink
+                  as="button"
+                  href={link.href}
+                  className="font-sans text-sm text-graphite hover:text-sage-accessible transition-colors duration-200 relative group"
                 >
                   {link.label}
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#6B9E7A] group-hover:w-full transition-all duration-300" />
-                </button>
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-sage group-hover:w-full transition-all duration-300" />
+                </ScrollLink>
               </li>
             )
           )}
@@ -93,17 +90,17 @@ export default function Navbar() {
           aria-controls="mobile-menu"
         >
           <span
-            className={`block w-6 h-0.5 bg-[#2C2C2C] transition-all duration-300 ${
+            className={`block w-6 h-0.5 bg-ink transition-all duration-300 ${
               menuOpen ? "rotate-45 translate-y-2" : ""
             }`}
           />
           <span
-            className={`block w-6 h-0.5 bg-[#2C2C2C] transition-all duration-300 ${
+            className={`block w-6 h-0.5 bg-ink transition-all duration-300 ${
               menuOpen ? "opacity-0" : ""
             }`}
           />
           <span
-            className={`block w-6 h-0.5 bg-[#2C2C2C] transition-all duration-300 ${
+            className={`block w-6 h-0.5 bg-ink transition-all duration-300 ${
               menuOpen ? "-rotate-45 -translate-y-2" : ""
             }`}
           />
@@ -119,21 +116,23 @@ export default function Navbar() {
         aria-hidden={!menuOpen}
       >
         <ul
-          className="bg-white/98 backdrop-blur-md px-6 py-4 flex flex-col gap-4 border-t border-[#EAF4ED]"
+          className="bg-white/98 backdrop-blur-md px-6 py-4 flex flex-col gap-4 border-t border-sage-light"
           role="list"
         >
           {navLinks.map((link) => (
             <li key={link.href}>
-              <button
-                onClick={() => handleNavClick(link.href)}
+              <ScrollLink
+                as="button"
+                href={link.href}
+                onNavigate={() => setMenuOpen(false)}
                 className={`w-full text-left font-sans text-base transition-colors duration-200 ${
                   link.label === "Agendar"
                     ? "btn-primary !w-full !text-center mt-2"
-                    : "text-[#5A5A5A] hover:text-sage-accessible py-1"
+                    : "text-graphite hover:text-sage-accessible py-1"
                 }`}
               >
                 {link.label === "Agendar" ? "Agendar hora" : link.label}
-              </button>
+              </ScrollLink>
             </li>
           ))}
         </ul>

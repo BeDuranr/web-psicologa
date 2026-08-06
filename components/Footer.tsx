@@ -1,5 +1,6 @@
 import Link from "next/link";
 import ScrollLink from "./ScrollLink";
+import { CONTACT_EMAIL, MAILTO_URL } from "@/lib/constants";
 
 const footerLinks = [
   { label: "Sobre mí", href: "#sobre-mi" },
@@ -12,7 +13,7 @@ const footerLinks = [
 export default function Footer() {
   return (
     <footer
-      className="bg-[#2C2C2C] text-white"
+      className="bg-ink text-white"
       role="contentinfo"
       aria-label="Pie de página"
     >
@@ -29,7 +30,7 @@ export default function Footer() {
           <ScrollLink
             as="button"
             href="#agendar"
-            className="bg-white text-sage-accessible font-sans font-semibold px-10 py-4 rounded-full hover:bg-[#F8F5F0] transition-all duration-300 shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0"
+            className="bg-white text-sage-accessible font-sans font-semibold px-10 py-4 rounded-full hover:bg-cream transition-all duration-300 shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0"
             ariaLabel="Ir a la sección de agendamiento"
           >
             Agendar ahora
@@ -47,7 +48,7 @@ export default function Footer() {
                 Araceli Aguilera Jorquera
               </span>
               <br />
-              <span className="font-sans text-xs tracking-widest text-[#6B9E7A] uppercase">
+              <span className="font-sans text-xs tracking-widest text-sage uppercase">
                 Psicóloga
               </span>
             </div>
@@ -69,7 +70,7 @@ export default function Footer() {
                     <ScrollLink
                       as="button"
                       href={link.href}
-                      className="font-sans text-sm text-white/60 hover:text-[#6B9E7A] transition-colors duration-200"
+                      className="font-sans text-sm text-white/60 hover:text-sage transition-colors duration-200"
                     >
                       {link.label}
                     </ScrollLink>
@@ -87,7 +88,7 @@ export default function Footer() {
             <ul className="space-y-4" role="list">
               <li className="flex items-start gap-3">
                 <svg
-                  className="w-4 h-4 text-[#6B9E7A] mt-0.5 shrink-0"
+                  className="w-4 h-4 text-sage mt-0.5 shrink-0"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -101,16 +102,16 @@ export default function Footer() {
                   />
                 </svg>
                 <a
-                  href="mailto:psicoaraceliaguilera@gmail.com"
-                  className="font-sans text-sm text-white/60 hover:text-[#6B9E7A] transition-colors duration-200"
+                  href={MAILTO_URL}
+                  className="font-sans text-sm text-white/60 hover:text-sage transition-colors duration-200"
                   aria-label="Enviar correo electrónico"
                 >
-                  psicoaraceliaguilera@gmail.com
+                  {CONTACT_EMAIL}
                 </a>
               </li>
               <li className="flex items-start gap-3">
                 <svg
-                  className="w-4 h-4 text-[#6B9E7A] mt-0.5 shrink-0"
+                  className="w-4 h-4 text-sage mt-0.5 shrink-0"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -135,7 +136,7 @@ export default function Footer() {
               </li>
               <li className="flex items-start gap-3">
                 <svg
-                  className="w-4 h-4 text-[#6B9E7A] mt-0.5 shrink-0"
+                  className="w-4 h-4 text-sage mt-0.5 shrink-0"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"

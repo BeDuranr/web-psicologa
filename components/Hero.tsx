@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import ScrollLink from "./ScrollLink";
 
 interface HeroProps {
   imageSrc?: string;
@@ -17,20 +18,20 @@ export default function Hero({ imageSrc = "/foto-psicologa.jpg" }: HeroProps) {
 
   return (
     <section
-      className="relative min-h-screen bg-[#F8F5F0] flex items-center overflow-hidden pt-20"
+      className="relative min-h-screen bg-cream flex items-center overflow-hidden pt-20"
       aria-label="Sección principal"
     >
       {/* Fondo decorativo */}
       <div
-        className="absolute top-0 right-0 w-1/2 h-full bg-[#EAF4ED] rounded-bl-[80px] hidden lg:block"
+        className="absolute top-0 right-0 w-1/2 h-full bg-sage-light rounded-bl-[80px] hidden lg:block"
         aria-hidden="true"
       />
       <div
-        className="absolute bottom-10 left-10 w-32 h-32 bg-[#C8E0CF] rounded-full opacity-30 blur-2xl"
+        className="absolute bottom-10 left-10 w-32 h-32 bg-sage-medium rounded-full opacity-30 blur-2xl"
         aria-hidden="true"
       />
       <div
-        className="absolute top-32 left-1/3 w-20 h-20 bg-[#F2E8E4] rounded-full opacity-50 blur-xl"
+        className="absolute top-32 left-1/3 w-20 h-20 bg-blush rounded-full opacity-50 blur-xl"
         aria-hidden="true"
       />
 
@@ -42,61 +43,49 @@ export default function Hero({ imageSrc = "/foto-psicologa.jpg" }: HeroProps) {
           }`}
         >
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 bg-[#EAF4ED] rounded-full px-4 py-2 mb-8">
-            <span className="w-2 h-2 bg-[#6B9E7A] rounded-full animate-pulse" />
+          <div className="inline-flex items-center gap-2 bg-sage-light rounded-full px-4 py-2 mb-8">
+            <span className="w-2 h-2 bg-sage rounded-full animate-pulse" />
             <span className="font-sans text-sm text-sage-accessible font-medium">
               Atención online · Chile
             </span>
           </div>
 
-          <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl font-semibold text-[#2C2C2C] leading-tight mb-6">
+          <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl font-semibold text-ink leading-tight mb-6">
             Un espacio{" "}
             <span className="text-sage-accessible italic">seguro</span>
             <br />
             para sanar
           </h1>
 
-          <p className="font-sans text-lg text-[#5A5A5A] leading-relaxed mb-10 max-w-md">
+          <p className="font-sans text-lg text-graphite leading-relaxed mb-10 max-w-md">
             Acompañamiento psicológico con enfoque cognitivo-conductual.
             Juntos identificamos los patrones que te limitan y trabajamos
             hacia el bienestar que mereces.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4">
-            <a
+            <ScrollLink
               href="#agendar"
-              onClick={(e) => {
-                e.preventDefault();
-                document
-                  .querySelector("#agendar")
-                  ?.scrollIntoView({ behavior: "smooth" });
-              }}
               className="btn-primary text-center"
-              aria-label="Agendar primera consulta"
+              ariaLabel="Agendar primera consulta"
             >
               Agendar primera consulta
-            </a>
-            <a
+            </ScrollLink>
+            <ScrollLink
               href="#sobre-mi"
-              onClick={(e) => {
-                e.preventDefault();
-                document
-                  .querySelector("#sobre-mi")
-                  ?.scrollIntoView({ behavior: "smooth" });
-              }}
               className="btn-secondary text-center"
-              aria-label="Conocer más sobre la psicóloga"
+              ariaLabel="Conocer más sobre la psicóloga"
             >
               Conocer más
-            </a>
+            </ScrollLink>
           </div>
 
           {/* Badge de enfoque */}
           <div className="mt-12 flex items-center gap-3">
-            <div className="flex items-center gap-2 bg-white border border-[#C8E0CF] rounded-full px-4 py-2 shadow-sm">
+            <div className="flex items-center gap-2 bg-white border border-sage-medium rounded-full px-4 py-2 shadow-sm">
               <span className="text-base" aria-hidden="true">🎓</span>
-              <span className="font-sans text-sm text-[#5A5A5A]">
-                Egresada <span className="font-semibold text-[#2C2C2C]">UCSH</span> · Enfoque <span className="font-semibold text-sage-accessible">TCC</span>
+              <span className="font-sans text-sm text-graphite">
+                Egresada <span className="font-semibold text-ink">UCSH</span> · Enfoque <span className="font-semibold text-sage-accessible">TCC</span>
               </span>
             </div>
           </div>
@@ -111,11 +100,11 @@ export default function Hero({ imageSrc = "/foto-psicologa.jpg" }: HeroProps) {
           {/* Marco decorativo */}
           <div className="relative">
             <div
-              className="absolute -top-4 -left-4 w-full h-full border-2 border-[#C8E0CF] rounded-3xl"
+              className="absolute -top-4 -left-4 w-full h-full border-2 border-sage-medium rounded-3xl"
               aria-hidden="true"
             />
             <div
-              className="absolute -bottom-4 -right-4 w-full h-full bg-[#C8E0CF] rounded-3xl opacity-30"
+              className="absolute -bottom-4 -right-4 w-full h-full bg-sage-medium rounded-3xl opacity-30"
               aria-hidden="true"
             />
 
@@ -140,11 +129,11 @@ export default function Hero({ imageSrc = "/foto-psicologa.jpg" }: HeroProps) {
         className="absolute bottom-8 left-0 right-0 flex flex-col items-center gap-2 animate-bounce"
         aria-hidden="true"
       >
-        <span className="font-sans text-xs text-[#707070] tracking-widest uppercase">
+        <span className="font-sans text-xs text-ash tracking-widest uppercase">
           Scroll
         </span>
         <svg
-          className="w-4 h-4 text-[#6B9E7A]"
+          className="w-4 h-4 text-sage"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"

@@ -11,9 +11,9 @@ const services = [
     subtitle: "Evaluación inicial",
     duration: "60 min",
     price: "$15.000",
-    color: "bg-[#EAF4ED]",
+    color: "bg-sage-light",
     accent: "text-sage-accessible",
-    border: "border-[#C8E0CF]",
+    border: "border-sage-medium",
     tag: "Ideal para comenzar",
     tagColor: "bg-sage-accessible text-white",
     features: [
@@ -52,7 +52,7 @@ export default function Services() {
   return (
     <section
       id="servicios"
-      className="py-24 bg-[#EAF4ED]"
+      className="py-24 bg-sage-light"
       aria-labelledby="servicios-titulo"
     >
       <div className="max-w-6xl mx-auto px-6">
@@ -63,12 +63,12 @@ export default function Services() {
           </span>
           <h2
             id="servicios-titulo"
-            className="font-serif text-4xl md:text-5xl font-semibold text-[#2C2C2C] mb-4"
+            className="font-serif text-4xl md:text-5xl font-semibold text-ink mb-4"
           >
             Servicios
           </h2>
           <div className="divider-sage" />
-          <p className="font-sans text-base text-[#5A5A5A] mt-6 max-w-xl mx-auto">
+          <p className="font-sans text-base text-graphite mt-6 max-w-xl mx-auto">
             Atención 100% online a través de videollamada. Todas las sesiones
             son confidenciales y en un ambiente cálido y profesional.
           </p>
@@ -105,14 +105,14 @@ export default function Services() {
               {/* Título */}
               <h3
                 className={`font-serif text-2xl font-semibold mb-1 ${
-                  service.featured ? "text-white" : "text-[#2C2C2C]"
+                  service.featured ? "text-white" : "text-ink"
                 }`}
               >
                 {service.title}
               </h3>
               <p
                 className={`font-sans text-sm mb-6 ${
-                  service.featured ? "text-white/90" : "text-[#707070]"
+                  service.featured ? "text-white/90" : "text-ash"
                 }`}
               >
                 {service.subtitle}
@@ -122,14 +122,14 @@ export default function Services() {
               <div className="flex items-end gap-3 mb-8">
                 <span
                   className={`font-serif text-4xl font-semibold ${
-                    service.featured ? "text-white" : "text-[#2C2C2C]"
+                    service.featured ? "text-white" : "text-ink"
                   }`}
                 >
                   {service.price}
                 </span>
                 <span
                   className={`font-sans text-sm mb-1 ${
-                    service.featured ? "text-white/90" : "text-[#707070]"
+                    service.featured ? "text-white/90" : "text-ash"
                   }`}
                 >
                   / {service.duration}
@@ -142,7 +142,7 @@ export default function Services() {
                   <li key={feat} className="flex items-start gap-3">
                     <svg
                       className={`w-4 h-4 mt-0.5 shrink-0 ${
-                        service.featured ? "text-white/80" : "text-[#6B9E7A]"
+                        service.featured ? "text-white/80" : "text-sage"
                       }`}
                       fill="currentColor"
                       viewBox="0 0 20 20"
@@ -156,7 +156,7 @@ export default function Services() {
                     </svg>
                     <span
                       className={`font-sans text-sm leading-snug ${
-                        service.featured ? "text-white/90" : "text-[#5A5A5A]"
+                        service.featured ? "text-white/90" : "text-graphite"
                       }`}
                     >
                       {feat}
@@ -182,7 +182,7 @@ export default function Services() {
         </div>
 
         {/* Nota de pago */}
-        <p className="text-center font-sans text-sm text-[#707070] mt-10 reveal">
+        <p className="text-center font-sans text-sm text-ash mt-10 reveal">
           🏦 Pago por transferencia bancaria.
         </p>
       </div>

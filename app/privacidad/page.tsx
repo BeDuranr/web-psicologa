@@ -52,9 +52,9 @@ const sections = [
 
 export default function PrivacidadPage() {
   return (
-    <div className="min-h-screen bg-[#F8F5F0]">
+    <div className="min-h-screen bg-cream">
       {/* Header */}
-      <div className="bg-white border-b border-[#EAF4ED]">
+      <div className="bg-white border-b border-sage-light">
         <div className="max-w-3xl mx-auto px-6 py-6 flex items-center justify-between">
           <Link
             href="/"
@@ -77,7 +77,7 @@ export default function PrivacidadPage() {
             </svg>
             <span className="font-sans text-sm font-medium">Volver al inicio</span>
           </Link>
-          <span className="font-serif text-sm text-[#707070]">
+          <span className="font-serif text-sm text-ash">
             Araceli Aguilera Jorquera · Psicóloga
           </span>
         </div>
@@ -90,19 +90,14 @@ export default function PrivacidadPage() {
           <span className="font-sans text-xs tracking-widest text-sage-accessible uppercase mb-3 block">
             Transparencia y confianza
           </span>
-          <h1 className="font-serif text-4xl md:text-5xl font-semibold text-[#2C2C2C] mb-4">
+          <h1 className="font-serif text-4xl md:text-5xl font-semibold text-ink mb-4">
             Política de Privacidad
           </h1>
           <div
-            style={{
-              width: 60,
-              height: 3,
-              background: "#6B9E7A",
-              borderRadius: 2,
-              marginBottom: 24,
-            }}
+            className="bg-sage rounded-sm mb-6"
+            style={{ width: 60, height: 3 }}
           />
-          <p className="font-sans text-base text-[#5A5A5A] leading-relaxed">
+          <p className="font-sans text-base text-graphite leading-relaxed">
             Tu privacidad es importante. Esta política explica de manera clara y
             simple qué datos se recopilan cuando usas este sitio, cómo se usan y
             cuáles son tus derechos. Si tienes alguna duda, no dudes en escribirme.
@@ -114,12 +109,12 @@ export default function PrivacidadPage() {
           {sections.map((section) => (
             <div
               key={section.title}
-              className="bg-white rounded-2xl p-7 border border-[#EAF4ED] shadow-sm"
+              className="bg-white rounded-2xl p-7 border border-sage-light shadow-sm"
             >
-              <h2 className="font-serif text-xl font-semibold text-[#2C2C2C] mb-3">
+              <h2 className="font-serif text-xl font-semibold text-ink mb-3">
                 {section.title}
               </h2>
-              <p className="font-sans text-sm text-[#5A5A5A] leading-relaxed">
+              <p className="font-sans text-sm text-graphite leading-relaxed">
                 {section.content}
               </p>
             </div>
@@ -127,8 +122,8 @@ export default function PrivacidadPage() {
         </div>
 
         {/* Pie */}
-        <div className="mt-12 pt-8 border-t border-[#EAF4ED] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-          <p className="font-sans text-xs text-[#707070]">
+        <div className="mt-12 pt-8 border-t border-sage-light flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+          <p className="font-sans text-xs text-ash">
             Última actualización: abril de 2026
           </p>
           <Link

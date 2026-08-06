@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { CONTACT_EMAIL, MAILTO_URL } from "@/lib/constants";
 
 const faqs = [
   {
@@ -31,7 +32,7 @@ export default function FAQ() {
   return (
     <section
       id="faq"
-      className="py-24 bg-[#EAF4ED]"
+      className="py-24 bg-sage-light"
       aria-labelledby="faq-titulo"
     >
       <div className="max-w-3xl mx-auto px-6">
@@ -42,7 +43,7 @@ export default function FAQ() {
           </span>
           <h2
             id="faq-titulo"
-            className="font-serif text-4xl md:text-5xl font-semibold text-[#2C2C2C] mb-4"
+            className="font-serif text-4xl md:text-5xl font-semibold text-ink mb-4"
           >
             Preguntas frecuentes
           </h2>
@@ -56,11 +57,9 @@ export default function FAQ() {
             return (
               <div
                 key={index}
-                className="reveal bg-white rounded-2xl shadow-sm"
-                style={{
-                  border: isOpen ? "2px solid #6B9E7A" : "2px solid #C8E0CF",
-                  transition: "border-color 0.3s ease",
-                }}
+                className={`reveal bg-white rounded-2xl shadow-sm border-2 transition-colors duration-300 ${
+                  isOpen ? "border-sage" : "border-sage-medium"
+                }`}
               >
                 {/* Pregunta */}
                 <button
@@ -71,25 +70,18 @@ export default function FAQ() {
                   id={`faq-question-${index}`}
                 >
                   <span
-                    className="font-serif text-lg font-medium pr-4"
-                    style={{ color: isOpen ? "#4A7256" : "#2C2C2C" }}
+                    className={`font-serif text-lg font-medium pr-4 ${
+                      isOpen ? "text-sage-accessible" : "text-ink"
+                    }`}
                   >
                     {faq.question}
                   </span>
                   <div
-                    style={{
-                      width: 32,
-                      height: 32,
-                      borderRadius: "50%",
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      flexShrink: 0,
-                      background: isOpen ? "#6B9E7A" : "#EAF4ED",
-                      color: isOpen ? "white" : "#6B9E7A",
-                      transform: isOpen ? "rotate(180deg)" : "rotate(0deg)",
-                      transition: "all 0.3s ease",
-                    }}
+                    className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 transition-all duration-300 ${
+                      isOpen
+                        ? "bg-sage text-white rotate-180"
+                        : "bg-sage-light text-sage"
+                    }`}
                     aria-hidden="true"
                   >
                     <svg
@@ -120,7 +112,7 @@ export default function FAQ() {
                     transition: "max-height 0.45s ease",
                   }}
                 >
-                  <p className="font-sans text-sm text-[#5A5A5A] leading-relaxed px-7 pb-6 pt-1">
+                  <p className="font-sans text-sm text-graphite leading-relaxed px-7 pb-6 pt-1">
                     {faq.answer}
                   </p>
                 </div>
@@ -131,15 +123,15 @@ export default function FAQ() {
 
         {/* Contact CTA */}
         <div className="text-center mt-12 reveal">
-          <p className="font-sans text-sm text-[#5A5A5A] mb-4">
+          <p className="font-sans text-sm text-graphite mb-4">
             ¿Tienes otra pregunta? Escríbeme directamente.
           </p>
           <a
-            href="mailto:psicoaraceliaguilera@gmail.com"
+            href={MAILTO_URL}
             className="font-sans text-sm font-semibold text-sage-accessible hover:underline transition-all"
             aria-label="Enviar correo con preguntas"
           >
-            psicoaraceliaguilera@gmail.com →
+            {CONTACT_EMAIL} →
           </a>
         </div>
       </div>

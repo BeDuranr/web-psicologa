@@ -22,17 +22,17 @@ const credentials = [
 ];
 
 const enfoques = [
-  { label: "Cognitivo-Conductual", color: "bg-[#F2E8E4] text-terracotta-accessible" },
-  { label: "Terapia Individual", color: "bg-[#EAF4ED] text-sage-accessible" },
-  { label: "Ansiedad y Autoestima", color: "bg-[#F2E8E4] text-terracotta-accessible" },
-  { label: "Desarrollo Personal", color: "bg-[#EAF4ED] text-sage-accessible" },
+  { label: "Cognitivo-Conductual", color: "bg-blush text-terracotta-accessible" },
+  { label: "Terapia Individual", color: "bg-sage-light text-sage-accessible" },
+  { label: "Ansiedad y Autoestima", color: "bg-blush text-terracotta-accessible" },
+  { label: "Desarrollo Personal", color: "bg-sage-light text-sage-accessible" },
 ];
 
 export default function About() {
   return (
     <section
       id="sobre-mi"
-      className="py-24 bg-[#F8F5F0]"
+      className="py-24 bg-cream"
       aria-labelledby="sobre-mi-titulo"
     >
       <div className="max-w-6xl mx-auto px-6">
@@ -43,7 +43,7 @@ export default function About() {
           </span>
           <h2
             id="sobre-mi-titulo"
-            className="font-serif text-4xl md:text-5xl font-semibold text-[#2C2C2C] mb-4"
+            className="font-serif text-4xl md:text-5xl font-semibold text-ink mb-4"
           >
             Sobre mí
           </h2>
@@ -53,14 +53,14 @@ export default function About() {
         <div className="grid lg:grid-cols-2 gap-16 items-start">
           {/* Texto */}
           <div className="reveal reveal-delay-1">
-            <p className="font-sans text-base text-[#5A5A5A] leading-relaxed mb-6">
+            <p className="font-sans text-base text-graphite leading-relaxed mb-6">
               Soy psicóloga egresada de la Universidad Católica Silva Henríquez,
               con una profunda vocación por el acompañamiento emocional y el
               bienestar de las personas. Desde mis inicios en la carrera me
               destaqué por ser ordenada, metódica y comprometida — cualidades
               que hoy pongo al servicio de cada proceso terapéutico.
             </p>
-            <p className="font-sans text-base text-[#5A5A5A] leading-relaxed mb-6">
+            <p className="font-sans text-base text-graphite leading-relaxed mb-6">
               Mi trabajo se basa en la Terapia Cognitivo-Conductual (TCC),
               un enfoque con amplio respaldo científico que nos permite trabajar
               de manera estructurada, identificando los pensamientos, emociones
@@ -68,7 +68,7 @@ export default function About() {
               temáticas como ansiedad, autoestima, dificultades relacionales
               y desarrollo personal.
             </p>
-            <p className="font-sans text-base text-[#5A5A5A] leading-relaxed mb-10">
+            <p className="font-sans text-base text-graphite leading-relaxed mb-10">
               Aunque estoy en los inicios de mi carrera profesional, traigo
               conmigo una formación sólida y ganas genuinas de acompañarte.
               Creo en construir un vínculo terapéutico de confianza, donde
@@ -77,7 +77,7 @@ export default function About() {
 
             {/* Enfoques */}
             <div>
-              <p className="font-sans text-sm font-semibold text-[#2C2C2C] mb-4 uppercase tracking-wider">
+              <p className="font-sans text-sm font-semibold text-ink mb-4 uppercase tracking-wider">
                 Mis enfoques terapéuticos
               </p>
               <div className="flex flex-wrap gap-3">
@@ -117,8 +117,8 @@ export default function About() {
             </div>
 
             {/* Credenciales */}
-            <div className="bg-white rounded-3xl p-8 border border-[#EAF4ED] shadow-sm">
-              <h3 className="font-serif text-xl font-semibold text-[#2C2C2C] mb-6">
+            <div className="bg-white rounded-3xl p-8 border border-sage-light shadow-sm">
+              <h3 className="font-serif text-xl font-semibold text-ink mb-6">
                 Formación y credenciales
               </h3>
               <ul className="space-y-5" role="list">
@@ -131,10 +131,10 @@ export default function About() {
                       {cred.icon}
                     </span>
                     <div>
-                      <p className="font-sans text-sm font-semibold text-[#2C2C2C]">
+                      <p className="font-sans text-sm font-semibold text-ink">
                         {cred.title}
                       </p>
-                      <p className="font-sans text-sm text-[#5A5A5A]">
+                      <p className="font-sans text-sm text-graphite">
                         {cred.desc}
                       </p>
                     </div>

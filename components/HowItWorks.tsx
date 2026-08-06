@@ -1,4 +1,5 @@
 import ScrollLink from "./ScrollLink";
+import { WHATSAPP_PHONE_DISPLAY } from "@/lib/constants";
 
 const steps = [
   {
@@ -15,8 +16,7 @@ const steps = [
   {
     number: "02",
     title: "Realiza el pago",
-    description:
-      "Recibirás los datos bancarios por correo. Realiza la transferencia y envía el comprobante por WhatsApp al +569 51014192 para confirmar tu hora.",
+    description: `Recibirás los datos bancarios por correo. Realiza la transferencia y envía el comprobante por WhatsApp al ${WHATSAPP_PHONE_DISPLAY} para confirmar tu hora.`,
     icon: (
       <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -51,7 +51,7 @@ export default function HowItWorks() {
   return (
     <section
       id="como-funciona"
-      className="py-24 bg-[#F8F5F0]"
+      className="py-24 bg-cream"
       aria-labelledby="como-funciona-titulo"
     >
       <div className="max-w-6xl mx-auto px-6">
@@ -62,7 +62,7 @@ export default function HowItWorks() {
           </span>
           <h2
             id="como-funciona-titulo"
-            className="font-serif text-4xl md:text-5xl font-semibold text-[#2C2C2C] mb-4"
+            className="font-serif text-4xl md:text-5xl font-semibold text-ink mb-4"
           >
             Cómo funciona
           </h2>
@@ -73,7 +73,7 @@ export default function HowItWorks() {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 relative">
           {/* Línea conectora (desktop) */}
           <div
-            className="hidden lg:block absolute top-12 left-[calc(12.5%+2rem)] right-[calc(12.5%+2rem)] h-0.5 bg-gradient-to-r from-[#C8E0CF] via-[#6B9E7A] to-[#C8E0CF]"
+            className="hidden lg:block absolute top-12 left-[calc(12.5%+2rem)] right-[calc(12.5%+2rem)] h-0.5 bg-gradient-to-r from-sage-medium via-sage to-sage-medium"
             aria-hidden="true"
           />
 
@@ -85,7 +85,7 @@ export default function HowItWorks() {
             >
               {/* Número + icono */}
               <div className="relative inline-flex flex-col items-center mb-6">
-                <div className="w-20 h-20 bg-white border-2 border-[#C8E0CF] rounded-full flex items-center justify-center text-[#6B9E7A] shadow-sm group-hover:border-[#6B9E7A] group-hover:shadow-md transition-all duration-300 relative z-10">
+                <div className="w-20 h-20 bg-white border-2 border-sage-medium rounded-full flex items-center justify-center text-sage shadow-sm group-hover:border-sage group-hover:shadow-md transition-all duration-300 relative z-10">
                   {step.icon}
                 </div>
                 <span className="absolute -top-2 -right-2 w-7 h-7 bg-sage-accessible text-white rounded-full flex items-center justify-center font-sans text-xs font-bold z-20">
@@ -93,10 +93,10 @@ export default function HowItWorks() {
                 </span>
               </div>
 
-              <h3 className="font-serif text-xl font-semibold text-[#2C2C2C] mb-3">
+              <h3 className="font-serif text-xl font-semibold text-ink mb-3">
                 {step.title}
               </h3>
-              <p className="font-sans text-sm text-[#5A5A5A] leading-relaxed">
+              <p className="font-sans text-sm text-graphite leading-relaxed">
                 {step.description}
               </p>
             </div>

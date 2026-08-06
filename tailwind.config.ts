@@ -22,6 +22,10 @@ const config: Config = {
           DEFAULT: "#C4826A",
           accessible: "#9C573E",
         },
+        // Recurring text colors, extracted so components reference tokens instead of raw hex
+        ink: "#2C2C2C",
+        graphite: "#5A5A5A",
+        ash: "#707070",
       },
       fontFamily: {
         serif: ["var(--font-cormorant)", "Georgia", "serif"],

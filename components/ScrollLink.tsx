@@ -6,6 +6,7 @@ interface ScrollLinkProps {
   ariaLabel?: string;
   children: React.ReactNode;
   as?: "a" | "button";
+  onNavigate?: () => void;
 }
 
 export default function ScrollLink({
@@ -14,10 +15,12 @@ export default function ScrollLink({
   ariaLabel,
   children,
   as = "a",
+  onNavigate,
 }: ScrollLinkProps) {
   const handleClick = (e: React.MouseEvent) => {
     e.preventDefault();
     document.querySelector(href)?.scrollIntoView({ behavior: "smooth" });
+    onNavigate?.();
   };
 
   if (as === "button") {

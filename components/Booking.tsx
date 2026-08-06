@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { CONTACT_EMAIL, MAILTO_URL, WHATSAPP_URL } from "@/lib/constants";
 
 const CAL_USERNAME = process.env.NEXT_PUBLIC_CALCOM_USERNAME || "";
 const CAL_EVENT = process.env.NEXT_PUBLIC_CALCOM_EVENT || "consulta";
@@ -11,7 +12,7 @@ const TRANSFER_DATA = [
   { label: "Banco", value: "Bci / Banco Crédito e Inversiones" },
   { label: "Tipo de cuenta", value: "Cuenta Vista" },
   { label: "N° de cuenta", value: "777020560464" },
-  { label: "Correo", value: "psicoaraceliaguilera@gmail.com" },
+  { label: "Correo", value: CONTACT_EMAIL },
 ];
 
 export default function Booking() {
@@ -34,7 +35,7 @@ export default function Booking() {
   return (
     <section
       id="agendar"
-      className="py-24 bg-[#F8F5F0]"
+      className="py-24 bg-cream"
       aria-labelledby="agendar-titulo"
     >
       <div className="max-w-5xl mx-auto px-6">
@@ -45,12 +46,12 @@ export default function Booking() {
           </span>
           <h2
             id="agendar-titulo"
-            className="font-serif text-4xl md:text-5xl font-semibold text-[#2C2C2C] mb-4"
+            className="font-serif text-4xl md:text-5xl font-semibold text-ink mb-4"
           >
             Agenda tu consulta
           </h2>
           <div className="divider-sage" />
-          <p className="font-sans text-base text-[#5A5A5A] mt-6 max-w-lg mx-auto">
+          <p className="font-sans text-base text-graphite mt-6 max-w-lg mx-auto">
             Elige el día y hora que prefieras. Luego realiza la transferencia
             y envía el comprobante por WhatsApp para confirmar tu sesión.
           </p>
@@ -66,10 +67,10 @@ export default function Booking() {
           ].map((item) => (
             <div
               key={item.label}
-              className="bg-white rounded-2xl px-4 py-4 flex items-center gap-3 border border-[#EAF4ED] shadow-sm"
+              className="bg-white rounded-2xl px-4 py-4 flex items-center gap-3 border border-sage-light shadow-sm"
             >
               <span className="text-xl" aria-hidden="true">{item.icon}</span>
-              <span className="font-sans text-xs font-medium text-[#5A5A5A]">
+              <span className="font-sans text-xs font-medium text-graphite">
                 {item.label}
               </span>
             </div>
@@ -77,12 +78,12 @@ export default function Booking() {
         </div>
 
         {/* Datos de pago */}
-        <div className="reveal mb-10 bg-white rounded-3xl border border-[#EAF4ED] shadow-sm overflow-hidden">
-          <div className="bg-[#EAF4ED] px-7 py-4 flex items-center gap-3">
-            <svg className="w-5 h-5 text-[#6B9E7A] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+        <div className="reveal mb-10 bg-white rounded-3xl border border-sage-light shadow-sm overflow-hidden">
+          <div className="bg-sage-light px-7 py-4 flex items-center gap-3">
+            <svg className="w-5 h-5 text-sage shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
             </svg>
-            <p className="font-sans text-sm font-semibold text-[#2C2C2C]">
+            <p className="font-sans text-sm font-semibold text-ink">
               Datos para la transferencia
             </p>
           </div>
@@ -91,25 +92,25 @@ export default function Booking() {
             <div className="grid sm:grid-cols-2 gap-x-10 gap-y-4 mb-6">
               {TRANSFER_DATA.map((item) => (
                 <div key={item.label}>
-                  <p className="font-sans text-xs text-[#707070] uppercase tracking-wider mb-0.5">
+                  <p className="font-sans text-xs text-ash uppercase tracking-wider mb-0.5">
                     {item.label}
                   </p>
-                  <p className="font-sans text-sm font-semibold text-[#2C2C2C]">
+                  <p className="font-sans text-sm font-semibold text-ink">
                     {item.value}
                   </p>
                 </div>
               ))}
             </div>
 
-            <div className="border-t border-[#EAF4ED] pt-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-              <p className="font-sans text-sm text-[#5A5A5A]">
+            <div className="border-t border-sage-light pt-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+              <p className="font-sans text-sm text-graphite">
                 Una vez realizada la transferencia, envía el comprobante por WhatsApp para confirmar tu hora.
               </p>
               <div className="shrink-0 flex items-center gap-3">
                 {/* Botón copiar datos */}
                 <button
                   onClick={handleCopy}
-                  className="flex items-center gap-2 bg-white text-sage-accessible font-sans text-sm font-semibold px-5 py-3 rounded-full border border-[#6B9E7A] hover:bg-[#EAF4ED] transition-colors duration-200 shadow-sm"
+                  className="flex items-center gap-2 bg-white text-sage-accessible font-sans text-sm font-semibold px-5 py-3 rounded-full border border-sage hover:bg-sage-light transition-colors duration-200 shadow-sm"
                   aria-label="Copiar datos de transferencia"
                   aria-live="polite"
                 >
@@ -131,7 +132,7 @@ export default function Booking() {
                 </button>
                 {/* Botón WhatsApp */}
                 <a
-                  href="https://wa.me/56951014192"
+                  href={WHATSAPP_URL}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 bg-[#25D366] text-white font-sans text-sm font-semibold px-5 py-3 rounded-full hover:bg-[#20bd5a] transition-colors duration-200 shadow-sm"
@@ -148,7 +149,7 @@ export default function Booking() {
         </div>
 
         {/* Cal.com iframe embed */}
-        <div className="reveal bg-white rounded-3xl overflow-hidden shadow-lg border border-[#EAF4ED]">
+        <div className="reveal bg-white rounded-3xl overflow-hidden shadow-lg border border-sage-light">
           {CAL_USERNAME ? (
             <iframe
               src={calUrl}
@@ -163,9 +164,9 @@ export default function Booking() {
           ) : (
             // Fallback si no hay username configurado
             <div className="min-h-[400px] flex flex-col items-center justify-center p-12 text-center">
-              <div className="w-16 h-16 bg-[#EAF4ED] rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 bg-sage-light rounded-full flex items-center justify-center mx-auto mb-4">
                 <svg
-                  className="w-8 h-8 text-[#6B9E7A]"
+                  className="w-8 h-8 text-sage"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -179,12 +180,12 @@ export default function Booking() {
                   />
                 </svg>
               </div>
-              <p className="font-sans text-sm font-semibold text-[#2C2C2C] mb-2">
+              <p className="font-sans text-sm font-semibold text-ink mb-2">
                 Calendario no configurado
               </p>
-              <p className="font-sans text-xs text-[#707070]">
+              <p className="font-sans text-xs text-ash">
                 Agrega tu username de Cal.com en{" "}
-                <code className="bg-[#EAF4ED] px-1 py-0.5 rounded text-sage-accessible">
+                <code className="bg-sage-light px-1 py-0.5 rounded text-sage-accessible">
                   .env.local
                 </code>
               </p>
@@ -193,13 +194,13 @@ export default function Booking() {
         </div>
 
         {/* Contacto alternativo */}
-        <p className="text-center font-sans text-sm text-[#707070] mt-8 reveal">
+        <p className="text-center font-sans text-sm text-ash mt-8 reveal">
           ¿Prefieres escribirme primero?{" "}
           <a
-            href="mailto:psicoaraceliaguilera@gmail.com"
+            href={MAILTO_URL}
             className="text-sage-accessible font-medium hover:underline"
           >
-            psicoaraceliaguilera@gmail.com
+            {CONTACT_EMAIL}
           </a>
         </p>
       </div>
